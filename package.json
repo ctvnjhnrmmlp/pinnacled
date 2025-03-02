@@ -6,6 +6,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "db:push": "dotenv -e .env.development -- npx prisma db push",
+    "db:migrate": "dotenv -e .env.development -- npx prisma migrate deploy",
     "test:unit": "",
     "test:e2e": ""
   },
@@ -46,5 +48,8 @@
     "eslint-config-next": "15.2.0",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "prisma": {
+    "schema": "database/schema.prisma"
   }
 }
